@@ -1,1 +1,19 @@
-node_modules
+# Ignore all Excel files
+*.xlsx
+*.xls
+
+# Ignore a specific folder containing Excel files
+/public/excel/
+
+# Ignore CSV files
+*.csv
+
+# Ignore node_modules folder
+/node_modules/
+
+# Ignore environment variables
+.env
+
+# Ignore logs and temporary files
+*.log
+*.tmp
