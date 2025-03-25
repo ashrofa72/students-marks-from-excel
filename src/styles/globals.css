@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Print-specific styles */
+@media print {
+    /* Hide non-essential elements */
+    button, select, label, .hidden-on-print {
+      display: none !important;
+    }
+  
+    /* Ensure the table fits within the page */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 10px; /* Reduce font size for compactness */
+    }
+  
+    th, td {
+      padding: 4px; /* Reduce padding */
+      border: 1px solid #000; /* Ensure borders are visible */
+      text-align: center;
+    }
+  
+    /* Prevent table rows from breaking across pages */
+    tr {
+      page-break-inside: avoid;
+    }
+  
+    /* Control page margins */
+    @page {
+      size: A4; /* Set paper size to A4 */
+      margin: 10mm; /* Reduce margins */
+    }
+  
+    /* Ensure the container spans the full width */
+    .container {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  }
